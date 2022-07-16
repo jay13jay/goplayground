@@ -23,15 +23,13 @@ func TwoSum_BF(nums []int, target int) []int {
 	return ret
 }
 
-func TwoSum_HM(nums []int, target int) []int {
+func TwoSum_HM(nums []int, target int) [2]int {
 	indexMap := make(map[int]int)
 	for currIndex, currNum := range nums {
-		fmt.Printf("Current map: %v\n", indexMap)
-		fmt.Printf("Current number: %d\n", currNum)
 		if requiredIdx, isPresent := indexMap[target-currNum]; isPresent {
-			return []int{requiredIdx, currIndex}
+			return [2]int{requiredIdx, currIndex}
 		}
 		indexMap[currNum] = currIndex
 	}
-	return []int{}
+	return [2]int{}
 }

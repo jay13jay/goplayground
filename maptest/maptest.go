@@ -1,8 +1,13 @@
 package maptest
 
-func MapPractice() (string, error) {
+func MapPractice() (map[int]int, error) {
 	var err error
-	var ret string
+
+	m := map[int]int{}
+
+	m[0] = 13
+
+	ret := m
 
 	return ret, err
 }
