@@ -2,16 +2,20 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"time"
 
-	"gitlab.com/jhax/goplayground/twosum"
+	"gitlab.com/jhax/goplayground/azonmissingarray"
 )
 
-func main() {
-	fmt.Println("Starting")
-	// out, _ := maptest.MapPractice()
-	var target int = 6
-	var numList = []int{2, 3, 6, 3}
+const alen = 10
 
-	out := twosum.TwoSum_HM(numList, target)
-	fmt.Printf("Output below:\n%v\n", out)
+func main() {
+	rand.Seed(time.Now().UnixNano())
+
+	var a []int
+
+	a = azonmissingarray.GenerateArray(alen)
+
+	fmt.Printf("Created array: %v\n", a)
 }
